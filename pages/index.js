@@ -121,6 +121,12 @@ yarn add -D scss tailwindcss postcss-preset-env postcss-flexbugs-fixes
                         </ul>
                       </li>
                       <li id="menu13">
+                        <label htmlFor="menu13"><a>📝 _document.js</a></label>
+                        <input defaultChecked id="menu13" value="" type="checkbox" />
+                        <ul>
+                        </ul>
+                      </li>
+                      <li id="menu13">
                         <label htmlFor="menu13"><a>📝 _error.js</a></label>
                         <input defaultChecked id="menu13" value="" type="checkbox" />
                         <ul>

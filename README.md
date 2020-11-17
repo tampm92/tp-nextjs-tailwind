@@ -143,6 +143,7 @@ Update `/assets/styles/globals.css` to `/assets/styles/globals.scss` with conent
 │   └── error.js
 ├── pages
 │   ├── _app.js
+│   ├── _document.js
 │   ├── _error.js
 │   ├── 404.js
 │   └── index.js
