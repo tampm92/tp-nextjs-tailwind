@@ -50,7 +50,8 @@ Move `/styles` folder to `/assets` folder
 Update `/pages/_app.js`
 
 ```js
-import '@/assets/styles/globals.scss'
+import "@/assets/styles/tailwind.css"
+import "@/assets/styles/globals.scss"
 ```
 
 ## Built-In CSS Support
@@ -105,7 +106,7 @@ module.exports = {
 }
 ```
 
-Update `/assets/styles/globals.css` to `/assets/styles/globals.scss` with conent
+Update `/assets/styles/tailwind.css` with conent
 
 ```css
 @tailwind base;
@@ -115,11 +116,6 @@ Update `/assets/styles/globals.css` to `/assets/styles/globals.scss` with conent
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
-
-/* Write your own custom component styles here */
-.btn-blue {
-  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
-}
 
 /* Start purging... */
 @tailwind utilities;
@@ -133,7 +129,8 @@ Update `/assets/styles/globals.css` to `/assets/styles/globals.scss` with conent
 .
 ├── assets
 │   ├── styles
-│   │   └── globals.scss
+│   │   ├── globals.scss
+│   │   └──tailwind.css
 │   └── images
 ├── components
 │   ├── common

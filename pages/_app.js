@@ -7,6 +7,7 @@ import Router from "next/router";
 import LayoutDefault from "@/layouts/default";
 import PageChange from "@/components/common/PageChange";
 
+import "@/assets/styles/tailwind.css";
 import "@/assets/styles/globals.scss";
 
 Router.events.on("routeChangeStart", (url) => {
