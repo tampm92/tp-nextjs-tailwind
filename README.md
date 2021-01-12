@@ -6,8 +6,7 @@
 - [NextJS Basic Setup](https://nextjs.org/learn/basics/create-nextjs-app)
 - [TailwindCSS](https://tailwindcss.com/)
 
-https://pankod.github.io/next-boilerplate/
-https://unlyed.github.io/next-right-now/
+> More setup for NEXT JS [here](https://tampm.com/blog/next-js/next-js-tp-setup)
 
 ## Create a Next.js App
 
@@ -19,7 +18,7 @@ yarn create next-app
 
 ## Setup base
 
-Create jsconfig.json with content
+Create `jsconfig.json` with content
 
 ```json
 {
@@ -33,7 +32,7 @@ Create jsconfig.json with content
 }
 ```
 
-Create next.config.js with content
+Create `next.config.js` with content
 
 ```js
 module.exports = {
@@ -50,8 +49,8 @@ Move `/styles` folder to `/assets` folder
 Update `/pages/_app.js`
 
 ```js
-import "@/assets/styles/tailwind.css"
-import "@/assets/styles/globals.scss"
+import '@/assets/styles/tailwind.css'
+import '@/assets/styles/globals.scss'
 ```
 
 ## Built-In CSS Support
@@ -59,10 +58,10 @@ import "@/assets/styles/globals.scss"
 Install libs
 
 ```bash
-yarn add -D scss tailwindcss postcss-preset-env postcss-flexbugs-fixes
+yarn add -D sass tailwindcss postcss postcss-preset-env postcss-flexbugs-fixes
 ```
 
-Then write the following for postcss.config.js:
+Then write the following for `postcss.config.js`:
 
 ```js
 module.exports = {
@@ -85,15 +84,12 @@ module.exports = {
 }
 ```
 
-Recommend `removing unused CSS` by specifying the `purge` option on tailwind.config.js:
+Recommend `removing unused CSS` by specifying the `purge` option on `tailwind.config.js`:
 
 ```js
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
-  purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+  purge: ['./layouts/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'media', // 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -101,7 +97,9 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    extend: {},
+  },
   plugins: [],
 }
 ```
@@ -130,7 +128,7 @@ Update `/assets/styles/tailwind.css` with conent
 ├── assets
 │   ├── styles
 │   │   ├── globals.scss
-│   │   └──tailwind.css
+│   │   └── tailwind.css
 │   └── images
 ├── components
 │   ├── common
